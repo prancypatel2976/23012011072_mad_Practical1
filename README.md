@@ -1,6 +1,6 @@
-1_1<br>
+1_1. Store & Display Values in Different Variables: Create and display variables of different data types, including Integer, Double, Float, Long, Short, Byte, Char, Boolean, and String<br>
 <img width="271" height="299" alt="image" src="https://github.com/user-attachments/assets/c015d3f2-14c6-4ffe-ac7c-7521aa0dadde" />
-<br>1_2<br>
+<br>1_2. Type Conversion: Perform type conversions such as Integer to Double, String to Integer, and String to Double.<br>
 <img width="406" height="201" alt="image" src="https://github.com/user-attachments/assets/f45f71dd-a5c2-4311-bdee-d363c26a77f9" />
 <br>1_3<br>
 <img width="509" height="696" alt="image" src="https://github.com/user-attachments/assets/c682cb87-e915-4982-8729-0fd4a884b5e1" />
