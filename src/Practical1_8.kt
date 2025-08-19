@@ -1,53 +1,65 @@
-import java.util.Arrays
 fun main(){
-    println("-:Array Operations:-")
-    val a=intArrayOf(10,20,30,40)
-    println("1D Array with joinToString(): ${a.joinToString()}")
-    val b=arrayOf(
-        intArrayOf(1,2),
-        intArrayOf(3,4),
-        intArrayOf(5,6)
+    val a=arrayOf(10, 90, 60, 80, 100)
+    println("Create Array-1 by using arraOf() method:")
+    println(a.joinToString())
+    val b=Array<Int>(5) {0}
+    println("Create Array-2 by using Array<>(): ")
+    println(b.joinToString())
+    val c=Array<Int>(8) { it }
+    println("Create Array-3 by using Array<Int>() and lambda function: ")
+    println(c.joinToString())
+    val d= IntArray(5) {0}
+    println("Create Array-4 by using IntArray(): ")
+    println(d.joinToString())
+    val e= intArrayOf(12,10,1,5,18,19)
+    println("Create Array-5 by using intArrayOf(): ")
+    println(e.joinToString())
+    var f=arrayOf(
+        intArrayOf(1, 3),
+        intArrayOf(4, 5),
+        intArrayOf(6, 7)
     )
-    println("2D Array with Arrays.deepToString(): ${Arrays.deepToString(b)}")
-    println("2D Array with contentDeepToString(): ${b.contentDeepToString()}")
-    println("-:Loop Types:-")
-    println("Using range (1..5):")
-    for(i in 1..5){
-        print("$i ")
+    println("Create Array-6 by using arrayOf() and intArrayOf(): ")
+    f.forEach { i ->
+        println(i.joinToString())
     }
-    println("\nUsing downTo (5 downTo 1):")
-    for(i in 5 downTo 1){
-        print("$i ")
+    val g = IntArray(5)
+    println("Please enter Array Value:")
+    for(i in g.indices)
+    {
+        print("a[$i]=")
+        g[i] = readln().toInt()
     }
-    println("\nUsing until (0 until size):")
-    for(i in 0 until a.size){
-        print("${a[i]} ")
-    }
-    println("\nUsing step (0..10 step 2):")
-    for(i in 0..10 step 2){
-        print("$i ")
-    }
-    println("\n-:Sorting Arrays:-")
-    val original=intArrayOf(42,12,89,33,7)
-    println("Original Array: ${original.joinToString()}")
-    val sortedManual=bubbleSort(original.copyOf())
-    println("Sorted Without Built-in: ${sortedManual.joinToString()}")
-    val sortedBuiltIn=builtInSort(original.copyOf())
-    println("Sorted With Built-in: ${sortedBuiltIn.joinToString()}")
-}
-fun bubbleSort(arr: IntArray): IntArray{
-    val n=arr.size
-    for(i in 0 until n){
-        for(j in 0 until n-i-1){
-            if(arr[j]>arr[j+1]){
-                val temp=arr[j]
-                arr[j]=arr[j+1]
-                arr[j+1]=temp
+    println("Entered Array:")
+    println(g.toList())
+
+    println("With Built-in Function")
+    println("After sorting by built-in function:")
+    val h = intArrayOf(56, 23, 49, 12, 2)
+    val sort = h.sortedArray()
+    println(sort.joinToString())
+    println()
+
+    println("Without Built-in Function")
+    println("Before Sorting:")
+    val r = intArrayOf(56, 23, 49, 12, 2)
+    println(r.joinToString())
+    val n = r.size
+
+    for (i in 0 until n) {
+        for (j in 0 until n - i - 1) {
+            if (r[j] > r[j + 1]) {
+                val temp = r[j]
+                r[j] = r[j + 1]
+                r[j + 1] = temp
             }
         }
     }
-    return arr
-}
-fun builtInSort(arr: IntArray): IntArray{
-    return arr.sortedArray()
+    println()
+    println("After Sorting without built-in function:")
+    for (element in r)
+    {
+        print("$element")
+    }
+
 }
