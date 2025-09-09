@@ -1,3 +1,4 @@
+AIM : Develop a Kotlin program for demonstrating various programming concepts.
 1_1. Store & Display Values in Different Variables: Create and display variables of different data types, including Integer, Double, Float, Long, Short, Byte, Char, Boolean, and String<br>
 <img width="271" height="299" alt="image" src="https://github.com/user-attachments/assets/c015d3f2-14c6-4ffe-ac7c-7521aa0dadde" />
 <br>1_2. Type Conversion: Perform type conversions such as Integer to Double, String to Integer, and String to Double.<br>
